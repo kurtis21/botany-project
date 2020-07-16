@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  console.log("this is where javascript code goes");
+
   return (
     <div className="App">
       <header className="App-header">

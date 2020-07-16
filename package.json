@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "main": "public/Main.js",
   "private": true,
+  "build": {
+    "appID": "com.electron.PollenDataHelper",
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "public/**/*"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,6 +19,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "sqlite3": "^5.0.0",
     "yarn": "^1.22.4"
   },
   "scripts": {
@@ -17,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-start": "electron ."
+    "electron-start": "electron .",
+    "postinstall": "install-app-deps"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "electron": "^9.1.0"
+    "electron": "^9.1.0",
+    "electron-builder": "^22.7.0"
   }
 }

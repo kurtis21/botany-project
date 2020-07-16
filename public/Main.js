@@ -17,7 +17,21 @@ let db = new sqlite3.Database(dbPath, (err) => {
     console.log('Great success! VERY NICE!');
 });
 
-db.run("CREATE TABLE pollen(name text)");
+function insertData(){
+    db.run("INSERT INTO pollen(name) VALUES('ya')");
+}
+
+db.run("CREATE TABLE IF NOT EXISTS pollen(name text)", (err) => {
+    if (err){
+        return console.error(err.message);
+    }
+    //console.log('pollen TABLE created successfully'); 
+    insertData();
+}
+);
+
+
+
 
 app.on('ready', createWindow);
 

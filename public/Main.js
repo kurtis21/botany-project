@@ -14,7 +14,7 @@ let db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         return console.error(err.message);
     }
-    console.log('Great success! VERY NICE!');
+    console.log('database titled db created succesfully');
 });
 
 function insertData(){
@@ -25,7 +25,7 @@ db.run("CREATE TABLE IF NOT EXISTS pollen(name text)", (err) => {
     if (err){
         return console.error(err.message);
     }
-    //console.log('pollen TABLE created successfully'); 
+    console.log('pollen TABLE created successfully'); 
     insertData();
 }
 );

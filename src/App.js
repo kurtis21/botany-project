@@ -6,11 +6,36 @@ function App() {
   console.log("this is where javascript code goes");
 
   return (
+    <div className = "App">
+      <header className = "App-header">
+      This website enables easy entry and description of Pollen and Spores
+      <img src="website logo 1.png" width="700" height="500"/>
+      
+      <form name="begin entry button">
+        <button type="button" onClick="alert('hi')">
+          Click here to begin
+          </button>
+          
+      </form>
+
+      </header>
+
+      <body>
+      
+      </body>
+
+      
+    </div>
+  );
+
+
+  /* ORIGINAL
+  return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Kurtis makes the best app
+          Kurtis makes an app
         </p>
         <a
           className="App-link"
@@ -22,7 +47,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );*/
 }
 
 export default App;

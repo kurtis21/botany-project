@@ -6,7 +6,7 @@ export default function SelectShape (props) {
 
     const handleSubmit = (event) => {
         
-        alert("shape submitted")
+        alert("shape submitted as: " + shape)
         event.preventDefault()
         props.onSubmit()
     }

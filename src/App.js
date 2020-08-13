@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ClassSelect from './ClassSelect';
 import SelectShape from './Shape.js';
 
-function App() {
-  //this is where javascript code goes;
 
+function App() {
+  
   const [step, setStep] = useState(0);
 
   const nextStep = () => setStep(step+1);
@@ -16,9 +16,9 @@ function App() {
       return( 
         <div className = "App">
         <header className = "App-header">
-        This website enables easy entry and description of Pollen and Spores
-        
-        <img src="website logo 1.png" width="700" height="500"/>
+        This website enables easy entry and description of Pollen and Spores into an SQL database
+    
+        <img src="website logo 1.png" width="700" height="500" alt="website logo load failed"/>
   
         <form name="begin entry button">
           <button type="button" onClick={nextStep}>
@@ -30,10 +30,17 @@ function App() {
 
     case 1:
       return(
-        <SelectShape onSubmit={nextStep}/>
+        <ClassSelect onSubmit={nextStep}/>
+      
       );
 
     case 2:
+      return(
+        <SelectShape onSubmit={nextStep}/>
+        
+      );
+
+    case 3:
     default:
       return(
       <h1>there is no step here</h1>
@@ -42,12 +49,12 @@ function App() {
 
       
   }
-  
+}
+
+export default App;
 
 
-
-
-  /* ORIGINAL
+/* ORIGINAL
   return (
     <div className="App">
       <header className="App-header">
@@ -66,6 +73,3 @@ function App() {
       </header>
     </div>
   );*/
-}
-
-export default App;
